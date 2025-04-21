@@ -44,3 +44,44 @@ title: Week 1 Parsons' Problem
   }); 
 })(); 
 </script>
+
+
+## <a name="insertionv1"></a> Insertion Sort
+
+<div id="sortableTrash" class="sortable-code"></div> 
+<div id="sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "n = length of array\n" +
+    "For outer_index in Range(from 1 to n-1), do:\n" +
+    "   inner_index = outer_index # start with the i-th element\n" +
+    "   As long as (inner_index &gt; 0) AND (array[inner_index] &lt; array[inner_index - 1]), do:\n" +
+    "       swap(array[inner_index - 1], array[inner_index])\n" +
+    "       inner_index = inner_index - 1 # move to the left";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
