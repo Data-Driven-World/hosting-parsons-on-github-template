@@ -4,7 +4,7 @@ title: Week 1 Parsons' Problem
 ---
 # Parsons Practice for Week 1
 
-## Bubble Sort Version 1 Pseudocode
+## <a name="bubblev1"></a> Bubble Sort Version 1 Pseudocode
 
 <div id="sortableTrash" class="sortable-code"></div> 
 <div id="sortable" class="sortable-code"></div> 
@@ -16,12 +16,12 @@ title: Week 1 Parsons' Problem
 <script type="text/javascript"> 
 (function(){
   var initial = "1. n = length of array\n" +
-    "2. For outer_index from 1 to n-1, do:\n" +
-    "    2.1 For inner_index from 1 to n-1, do:\n" +
-    "        2.1.1 first_number = array[inner_index - 1]\n" +
-    "        2.1.2 second_number = array[inner_index]\n" +
-    "        2.1.3 if first_number &gt; second_number, do:\n" +
-    "            2.1.3.1 swap(first_number, second_number)";
+    "For outer_index from 1 to n-1, do:\n" +
+    "    For inner_index from 1 to n-1, do:\n" +
+    "        first_number = array[inner_index - 1]\n" +
+    "        second_number = array[inner_index]\n" +
+    "        if first_number &gt; second_number, do:\n" +
+    "            swap(first_number, second_number)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "sortable",
     "max_wrong_lines": 10,
