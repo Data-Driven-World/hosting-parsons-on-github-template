@@ -21,7 +21,7 @@ title: Week 1 Parsons' Problem
     "        first_number = array[inner_index - 1]\n" +
     "        second_number = array[inner_index]\n" +
     "        if first_number &gt; second_number, do:\n" +
-    "            swap(first_number, second_number)";
+    "            swap(array[inner_index-1], array[inner_index])";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "bubblev1-sortable",
     "max_wrong_lines": 10,
@@ -61,7 +61,7 @@ title: Week 1 Parsons' Problem
     "   inner_index = outer_index # start with the i-th element\n" +
     "   As long as (inner_index &gt; 0) AND (array[inner_index] &lt; array[inner_index - 1]), do:\n" +
     "       swap(array[inner_index - 1], array[inner_index])\n" +
-    "       inner_index = inner_index - 1 ";
+    "       inner_index = inner_index - 1";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "insertionv1-sortable",
     "max_wrong_lines": 10,
@@ -143,7 +143,7 @@ title: Week 1 Parsons' Problem
     "      first_number = array[inner_index - 1]\n" +
     "      second_number = array[inner_index]\n" +
     "      if first_number &gt; second_number, do:\n" +
-    "          swap(first_number, second_number)\n" +
+    "          swap(array[inner_index-1], array[inner_index])\n" +
     "          swapped = True";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "bubblev2-sortable",
